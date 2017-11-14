@@ -2,14 +2,13 @@
 #define seqList_h
 
 #include <stdio.h>
-#define initSize 30
+#define maxSize 100
 
 typedef int DataType;
 
 typedef struct _seq{
-	DataType *arr;
+	DataType arr[maxSize];
 	int arrSize;
-	int maxSize;
 } SeqList;
 
 //initial List

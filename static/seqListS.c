@@ -1,13 +1,8 @@
 #include "seqList.h"
 
 void initList(SeqList *List){
-	List->arr = (DataType *)malloc(sizeof(DataType) * initSize);
-	if(NULL == List->arr){
-		printf("Error!\n");
-		return;
-	}
-
-	List->maxSize = initSize;
+	//List = (SeqList *)malloc(sizeof(SeqList));
+	List->arr[maxSize];
 	List->arrSize = 0;
 
 	return;

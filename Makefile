@@ -6,4 +6,5 @@ seqList.o:seqList.c seqList.h
 	gcc -c $< -o $@
 
 .PHONY:clean
-	rm *.o
+clean:
+	rm *.o testSeqList

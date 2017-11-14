@@ -2,21 +2,22 @@
 
 int main(int argc, char **argv)
 {
-	SeqList *List;
+	SeqList List;
 	initList(&List);
-	DataType inData1 = 3;
-	DataType inData2 = 9;
-	DataType inData3 = 11;
-	DataType inData4 = 8;
-	DataType inData5 = 14;
-	DataType delData;
-	DataType findData = 9;
-	insertLlist(List, inData1, 0);
-	insertLlist(List, inData2, 1);
-	insertLlist(List, inData3, 2);
-	insertLlist(List, inData4, 3);
-	insertLlist(List, inData5, 4);
-	displayList(List);
+	creatList(&List);
+	displayList(&List);
+	DataType findData;
+	printf("please input the find data: ");
+	scanf("%d", &findData);
+	printf("you find %d in list %d\n", findData, findList(&List, findData));
+	displayList(&List);
+	DataType delLocal;
+	printf("please input the delte data: ");
+	scanf("%d", &delLocal);
+	DataType data;
+	deleteList(&List, &data, delLocal);
+	printf("you delete data is %d\n", data);
+	displayList(&List);
 
 	return 0;
 }
